@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student</title>
+
+<style>
+     h1{
+            text-align: center;
+        }
+        div{
+            -border: 2px solid black;
+        }
+
+        div .form{
+            display: flex;
+            flex-direction: column;
+            width: 500px;
+            border: 2px solid green;
+            margin: auto;
+            clear: none;
+        }
+
+        div .form .label{
+            font-size: 19px;
+            font-weight: bold;
+            margin: 5px 10px;
+        }
+
+        input{
+            margin: 5px 10px;;
+        }
+        
+        .navbar {
+          overflow: hidden;
+          background-color: #333;
+        }
+
+        .navbar a {
+          float: left;
+          font-size: 16px;
+          color: white;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+        }
+
+        .dropdown {
+          float: left;
+          overflow: hidden;
+        }
+
+        .dropdown .dropbtn {
+          font-size: 16px;
+          border: none;
+          outline: none;
+          color: white;
+          padding: 14px 16px;
+          background-color: inherit;
+          font-family: inherit;
+          margin: 0;
+        }
+
+        .navbar a:hover, .dropdown:hover .dropbtn {
+          background-color: red;
+        }
+
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #f9f9f9;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+
+        .dropdown-content a {
+          float: none;
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+          text-align: left;
+        }
+
+        .dropdown-content a:hover {
+          background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+          display: block;
+        }
+</style>
+
+</head>
+<body>
+  <div class="navbar">
+    <a href="index.html">Home</a>
+    <div class="dropdown">
+        <button class="dropbtn">View
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="http://localhost/Project/Select/student.php">Student</a>
+          <a href="http://localhost/Project/Select/parents.php">Parent</a>
+          <a href="http://localhost/Project/Select/teacher.php">Teacher</a>
+          <a href="http://localhost/Project/Select/class.php">Class</a>
+        </div>
+    </div>
+    <div class="dropdown">
+        <button class="dropbtn">Add
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="studentEntryForm.html">Student</a>
+          <a href="parentsEntryForm.html">Parent</a>
+          <a href="teacherEntryForm.html">Teacher</a>
+          <a href="classEntryForm.html">Class</a>
+        </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">Delete
+          <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="delStudent.html">Student</a>
+        <a href="delParents.html">Parent</a>
+        <a href="delTeacher.html">Teacher</a>
+        <a href="delClass.html">Class</a>
+      </div>
+  </div>
+  <div class="dropdown">
+    <button class="dropbtn">Update
+        <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="studentUpdate.html">Student</a>
+      <a href="parentsUpdate.html">Parent</a>
+      <a href="teacherUpdate.html">Teacher</a>
+      <a href="classUpdate.html">Class</a>
+    </div>
+</div>
+    <a href="Contact.html">Contact Us</a>
+</div>
+    
+        <h1>Student Entry</h1>
+    
+    <form action="uStudent.php" method="post">
+
+        <label class="label" for="student_id" >Student ID: </label>
+        <input type="number" name="student_id"  required>
+
+        <label class="label" for="student_name" >Student Name: </label>
+        <input type="text" name="student_name" maxlength="20" required>
+
+        <label class="label" for="student_address" id="address">Address: </label>
+        <input type="text" name="student_address" required maxlength="50">
+
+        <label class="label" for="student_medical_record">Medical Info: </label>
+        <input type="text" name="student_medical_record" maxlength="20" required>
+
+        <input type="submit" value="Submit" id="Submit">
+    </form>
+</body>
+</html>
